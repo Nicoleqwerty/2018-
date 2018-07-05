@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>day02_01.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="test01.css">
+<style type="text/css">/* 编写样式的区域    选择器 {行为}  # id选择器    */
+#p02 {
+	font-size: 60px;
+	color: yellow;
+}
+/* 类选择器  . */
+.myp{
+font-size: 60px;
+	color: green;
+}
+/*body 后代中的 span元素 修改  */
+body span{
+ color:gray;
+}
+[id]{
+background-color: pink;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="div01">
+		这是div <span>这是span</span>
+	</div>
+	<p id="p01" class="myp">这是一段文字</p>
+	<!-- style 样式属性  alt+/ 提示 -->
+<span>这是span33333333</span>
+	<p id="p02">这是第二段文字</p>
+	<p id="p03">这是第san段文字</p>
+	<p id="p04" class="myp">这是第si段文字</p>
+	用户名：<input type="text" disabled="disabled" name="uname">
+</body>
+</html>

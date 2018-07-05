@@ -1,0 +1,6 @@
+1.哪些可以做变量？
+<input type="">
+name="xxx"的一组元素
+2.onclick=function(){}
+或者 say()
+3.

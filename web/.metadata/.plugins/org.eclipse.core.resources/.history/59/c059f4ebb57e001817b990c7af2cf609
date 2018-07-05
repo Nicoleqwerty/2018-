@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+</head>
+<script type="text/javascript" src="D:\2018SUMMER实训\jquery-1.7.2.js"></script>
+<body>
+	<h1>欢迎登录</h1>
+	<div>
+		<form action="MyServlet" method="post">
+			<p align="left">
+				用户名：<input name="uname" type="text" size=20>
+			</p>
+			<p align="left">
+				密&nbsp;&nbsp;&nbsp;&nbsp;码：<input name="mm" type="password">
+			</p>
+			<input type="submit" value="提交"> 
+			&nbsp;&nbsp;&nbsp;<a href="register.html" >注册</a>
+		</form>
+	</div>
+</body>
+</html>

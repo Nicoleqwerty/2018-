@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>HuaShi02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!--web应用的初始化参数  -->
+  <context-param>
+  	<param-name>db</param-name>
+  	<param-value>mysql5.7</param-value>
+  </context-param>
+  
+  <!-- 有一个servlet 可以处理请求 -->
+  <servlet>  	
+  	<servlet-name>myServlet</servlet-name><!-- 可以随意写  Servlet的代号 -->
+  	<servlet-class>cn.rt.servlet.MyServlet01</servlet-class>
+  	<init-param><!-- 这个Servlet的初始化参数 -->
+  		<param-name>uname</param-name>
+  		<param-value>zhangsan</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>myServlet02</servlet-name>
+    <servlet-class>cn.rt.servlet.MyServlet02</servlet-class>
+  </servlet>
+
+  <servlet-mapping><!--外部访问的配置  -->
+  	<servlet-name>myServlet</servlet-name><!--需要和Servlet的代号一致  -->
+  	<url-pattern>/my</url-pattern><!--外部访问的路径  -->
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>myServlet02</servlet-name>
+    <url-pattern>/myServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

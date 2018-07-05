@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>books.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="../jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	$(function() { /* jquery的環境 */ /* 找到父节点中的tr  并删除 */
+		/* $(".del").click(function() {
+			//alert("删除了哈");
+			//删除该行信息
+			$(this).parents("tr").remove();
+
+		}); */
+		
+		/* 动态绑定事件方式来写删除 */
+		live('',function(){});
+		$(".del").live('click',function(){
+			$(this).parents("tr").remove();
+		
+		});
+
+		/* 添加功能 */
+
+		$("#btnsubmit").click(function() {
+			/* 获取四个输入框中的值 */
+			var bookid = $("#bookid").val();
+			var author = $("#author").val();
+			var title = $("#title").val();
+			var price = $("#price").val();
+			/* 拼接成tr  添加到表格*/
+			
+			$("<tr>	<td>"+bookid+"</td><td>"+autho+"</td><td>"+title+"</td><td>"+price+"</td><td><a href='edit.html'>修改</a><a href='#' class='del'>删除</a></td></tr>").appendTo($("#info"));
+		});
+
+
+
+
+
+	});
+</script>
+</head>
+
+<body>
+	<h1>添加</h1>
+	<table>
+		<tr>
+			<td>编号</td>
+			<td><input type="text" name="num" id="bookid"></td>
+		</tr>
+		<tr>
+			<td>作者</td>
+			<td><input type="text" name="author" id="author"></td>
+		</tr>
+
+		<tr>
+			<td>标题</td>
+			<td><input type="text" name="title" id="title"></td>
+		</tr>
+		<tr>
+			<td>价格</td>
+			<td><input type="text" name="price" id="price"></td>
+
+		</tr>
+
+		<tr>
+			<td><input type="button" id="btnsubmit" value="提交"></td>
+			<td><input type="reset" value="重置"></td>
+
+		</tr>
+	</table>
+
+	<h1>列表显示</h1>
+	<table id="info">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>作者</th>
+				<th>标题</th>
+				<th>价格</th>
+				<th>功能</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>tom</td>
+				<td>Java</td>
+				<td>20</td>
+				<td><a href="edit.html">修改</a><a href="#" class="del">删除</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>tom2</td>
+				<td>Java2</td>
+				<td>202</td>
+				<td><a href="edit.html">修改</a><a href="#" class="del">删除</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</body>
+</html>

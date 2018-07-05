@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="jquery-1.7.2.js"></script><!--引用外部的js文件 -->
+<script type="text/javascript">
+$(function(){//相当于 window.onload  /*jquery 对象 是使用$()包装后的dom对象  */
+	$("#btn01").click(function(){/*document.getElementById("btn01").onclick=function(){}  */
+		alert("hello!");
+
+	});
+	$("#btn02").click(function(){/* 添加单击事件 */
+	/* 创造一个输入框 加到页面中 */
+		$("body").append(" <input type='text' name='uname'>");/*  内部添加*/
+	});
+
+
+});
+
+
+
+
+</script>
+  </head>
+  
+  <body>
+ 
+    <input type="button" value="say" id="btn01">
+    <input type="button" value="add" id="btn02"><!--点击按钮 页面添加一个输入框  -->
+    
+  </body>
+</html>

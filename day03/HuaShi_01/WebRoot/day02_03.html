@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>day02_03.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript">
+	/* 定义函数   function*/
+	function say() {
+		alert("HelloWrold.");
+	}
+	window.onload = function() { /*window.onload() 是在页面元素框架加载完之后运行  */
+		/* 找到 btn03  并加单击事件 */
+		var btn03 = document.getElementById("btn03"); /* 从文档对象中根据id查询一个元素 */
+		btn03.onclick = function() { /*给单击事件赋值  */
+			alert("hello World.");
+
+		}
+		/*  点击show按钮，弹出div01的第一个子节点的value值*/
+		var btn04=document.getElementById("btn04");//找到按钮
+		btn04.onclick=function(){/* 给按钮添加单击事件 */
+			/* 弹出div01的第一个子节点的value值 */
+			var div01=document.getElementById("div01");
+			alert(div01.firstChild.value);
+			
+		}
+		
+	}
+</script>
+</head>
+
+<body>
+<div id="div01"><input type="button" onclick="alert('Hello!')" value="sayHello-----">
+	<!-- onclick 单机事件  alert(‘弹出的内容’) 弹出  -->
+
+	<input type="button" onclick="say()" value="sayHello2">
+	<input type="button" id="btn03" value="sayHello3">
+
+</div>
+	<input type="button" id="btn04" value="show">
+</body>
+</html>

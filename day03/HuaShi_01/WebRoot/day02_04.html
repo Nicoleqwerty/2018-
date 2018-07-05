@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>day02_04.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+<script type="text/javascript">
+/* 点击change按钮  修改三个输入框中的值 */
+window.onload=function(){
+	/* 找到按钮 */
+	var btn01=document.getElementById("btn01");	
+	btn01.onclick=function(){		
+	/* 修改三个输入框中的值 */
+		var  inputs=document.getElementsByName("uname");/* 根据name获取一组元素 数组 */
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].value="lisi";
+		}	
+	}}
+</script>
+  </head>
+  
+  <body>
+  <input type="text" name="uname" value="zhangs" onblur=""  onfocus="" onchange="">
+  <input type="text" name="uname" value="zhangs">
+  <input type="text" name="uname" value="zhangs">
+  <input type="button" name="btn01" id="btn01"  value="change">
+  <span id="sp01"><a>aaaa</a></span>
+  </body>
+</html>
